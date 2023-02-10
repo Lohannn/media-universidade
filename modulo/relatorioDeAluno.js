@@ -78,12 +78,12 @@ const calcularMedia = function (
     return status;
 }
 
-const calcularMediaExame = function (nomeDoAluno, nomeDoProfessor, generoDoAluno, generoDoProfessor, nomeDoCurso, nomeDaDisciplina, primeiraNota, segundaNota, terceiraNota, quartaNota, notaExame, media) {
+const calcularMediaExame = function (nomeDoAluno, nomeDoProfessor, generoDoAluno, generoDoProfessor, nomeDoCurso, nomeDaDisciplina, 
+    primeiraNota, segundaNota, terceiraNota, quartaNota, notaExame, media) {
+    
     let aluno = nomeDoAluno; let professor = nomeDoProfessor; let sexoAluno = generoDoAluno; let sexoProfessor = generoDoProfessor;
     let curso = nomeDoCurso; let disciplina = nomeDaDisciplina; let nota1 = Number(primeiraNota); let nota2 = Number(segundaNota);
-    let nota3 = Number(terceiraNota); let nota4 = Number(quartaNota);
-    let notaMedia = Number(media);
-    let exame = Number(notaExame);
+    let nota3 = Number(terceiraNota); let nota4 = Number(quartaNota); let notaMedia = Number(media); let exame = Number(notaExame);
     let mediaExame = (notaMedia + exame) / 2
 
     if (mediaExame >= 60) {
