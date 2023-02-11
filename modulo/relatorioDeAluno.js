@@ -37,7 +37,7 @@ const generoProfessor = function (professorSexo) {
     return palavraProfessor;
 }
 
-const calcularMedia = function (
+const criarRelatorio = function (
     nomeDoAluno,
     nomeDoProfessor,
     generoDoAluno,
@@ -52,7 +52,6 @@ const calcularMedia = function (
     let aluno = nomeDoAluno; let professor = nomeDoProfessor; let sexoAluno = generoDoAluno; let sexoProfessor = generoDoProfessor;
     let curso = nomeDoCurso; let disciplina = nomeDaDisciplina; let nota1 = Number(primeiraNota); let nota2 = Number(segundaNota);
     let nota3 = Number(terceiraNota); let nota4 = Number(quartaNota);
-
 
     if (aluno === '' || professor === '' || sexoAluno === '' || sexoProfessor === '' || curso === '' || disciplina === '' || nota1 === '' ||
         nota2 === '' || nota3 === '' || nota4 === '') {
@@ -78,7 +77,7 @@ const calcularMedia = function (
     return status;
 }
 
-const calcularMediaExame = function (nomeDoAluno, nomeDoProfessor, generoDoAluno, generoDoProfessor, nomeDoCurso, nomeDaDisciplina, 
+const criarRelatorioExame = function (nomeDoAluno, nomeDoProfessor, generoDoAluno, generoDoProfessor, nomeDoCurso, nomeDaDisciplina, 
     primeiraNota, segundaNota, terceiraNota, quartaNota, notaExame, media) {
     
     let aluno = nomeDoAluno; let professor = nomeDoProfessor; let sexoAluno = generoDoAluno; let sexoProfessor = generoDoProfessor;

@@ -31,7 +31,7 @@ entradaDados.question('Digite o nome do aluno: ', function (nomeDoAluno) {
                 } else {
                     entradaDados.question('Digite o nome do Curso: ', function (nomeDoCurso) {
                         let curso = nomeDoCurso;
-                        entradaDados.question('Digite o nome da Desciplina: ', function (nomeDaDisciplina) {
+                        entradaDados.question('Digite o nome da Disciplina: ', function (nomeDaDisciplina) {
                             let disciplina = nomeDaDisciplina;
                             entradaDados.question('Qual a primeira nota do aluno?: ', function (primeiraNota) {
                                 let nota1 = primeiraNota.replace(',', '.');
@@ -53,7 +53,7 @@ entradaDados.question('Digite o nome do aluno: ', function (nomeDoAluno) {
                                                 console.log('ERRO: As notas não devem ser menor que 0 ou maior que 100');
                                                 entradaDados.close()
                                             } else {
-                                                let resultado = registro.calcularMedia(aluno, professor, sexoAluno, sexoProfessor, curso,
+                                                let resultado = registro.criarRelatorio(aluno, professor, sexoAluno, sexoProfessor, curso,
                                                     disciplina, nota1, nota2, nota3, nota4)
 
                                                 if (resultado >= 50 && resultado < 70) {
@@ -67,7 +67,7 @@ entradaDados.question('Digite o nome do aluno: ', function (nomeDoAluno) {
                                                             console.log('ERRO: A nota não deve ser menor que 0 ou maior que 100');
                                                             entradaDados.close()
                                                         } else {
-                                                            let resultadoExame = registro.calcularMediaExame(aluno, professor, sexoAluno, sexoProfessor, curso,
+                                                            let resultadoExame = registro.criarRelatorioExame(aluno, professor, sexoAluno, sexoProfessor, curso,
                                                                 disciplina, nota1, nota2, nota3, nota4, exame, resultado);
 
                                                             if (resultadoExame === false) {
