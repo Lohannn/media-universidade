@@ -53,6 +53,7 @@ const criarRelatorio = function (
     let curso = nomeDoCurso; let disciplina = nomeDaDisciplina; let nota1 = Number(primeiraNota); let nota2 = Number(segundaNota);
     let nota3 = Number(terceiraNota); let nota4 = Number(quartaNota);
 
+
     if (aluno === '' || professor === '' || sexoAluno === '' || sexoProfessor === '' || curso === '' || disciplina === '' || nota1 === '' ||
         nota2 === '' || nota3 === '' || nota4 === '') {
         status = false;
@@ -77,8 +78,19 @@ const criarRelatorio = function (
     return status;
 }
 
-const criarRelatorioExame = function (nomeDoAluno, nomeDoProfessor, generoDoAluno, generoDoProfessor, nomeDoCurso, nomeDaDisciplina, 
-    primeiraNota, segundaNota, terceiraNota, quartaNota, notaExame, media) {
+const criarRelatorioExame = function (
+    nomeDoAluno, 
+    nomeDoProfessor, 
+    generoDoAluno, 
+    generoDoProfessor, 
+    nomeDoCurso, 
+    nomeDaDisciplina, 
+    primeiraNota, 
+    segundaNota, 
+    terceiraNota, 
+    quartaNota, 
+    notaExame, 
+    media) {
     
     let aluno = nomeDoAluno; let professor = nomeDoProfessor; let sexoAluno = generoDoAluno; let sexoProfessor = generoDoProfessor;
     let curso = nomeDoCurso; let disciplina = nomeDaDisciplina; let nota1 = Number(primeiraNota); let nota2 = Number(segundaNota);
@@ -99,6 +111,6 @@ const criarRelatorioExame = function (nomeDoAluno, nomeDoProfessor, generoDoAlun
 
 
 module.exports = {
-    calcularMedia,
-    calcularMediaExame
+    criarRelatorio,
+    criarRelatorioExame
 }
